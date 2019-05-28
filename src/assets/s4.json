@@ -1,0 +1,26 @@
+[
+  {
+    "component": "S4Component",
+    "params": {
+    
+      "common": {
+        "color": "#000"
+        
+      },
+      "position": {
+        "paddingTop": "55px",
+        "paddingBottom": "55px"
+      },
+      
+      "text": {
+        "fontSize": "18px",
+        "color": "#000"
+      }
+      
+      
+    },
+    "data": {
+      "text": "Each type of visual aid has pros and cons that must be evaluated to ensure it will be beneficial to the overall presentation. Before incorporating visual aids into speeches."
+    }
+  }
+]

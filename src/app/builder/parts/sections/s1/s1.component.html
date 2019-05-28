@@ -1,0 +1,13 @@
+  <div class="component-content" [ngStyle]="params.common" [style.background-image]="data.background != '' ? 'url(' + data.background + ')' : ''" >
+    <div class="component-content__inner" [ngStyle]="params.position">
+      
+      
+        <div class="content">
+          <span class="company" [ngStyle]="params.company">{{data.company}}</span>
+        
+          <h1 class="title" [ngStyle]="params.title">{{data.title}}</h1>
+          <p class="subtitle" [ngStyle]="params.subtitle">{{data.subtitle}}</p>
+        </div>
+      
+    </div>  
+  </div>

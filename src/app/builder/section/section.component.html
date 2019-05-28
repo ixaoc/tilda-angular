@@ -1,0 +1,38 @@
+<div class="section">
+
+  <div class="component">
+    <div class="top-settings-panel">
+      <ul class="btn-list component-settings--left">
+        <li class="btn-list__item" (click)="openEditor('params')">Настройки</li>
+        <li class="btn-list__item btn-orange" (click)="openEditor('data')">Контент</li>
+        
+      </ul>
+      
+      <ul class="btn-list component-settings--right">
+        <li class="btn-list__item" (click)="upComponent()"><i class="fas fa-arrow-up"></i></li>
+        <li class="btn-list__item" (click)="downComponent()"><i class="fas fa-arrow-down"></i></li>
+        
+      </ul>
+      
+      <ul class="btn-list component-settings--right is-margin">
+        <li class="btn-list__item" (click)="deleteComponent()"><i class="far fa-trash-alt"></i></li>
+      </ul>
+    </div>
+    
+    <div class="bottom-settings-panel">
+      <div class="add-btn" (click)="addByIndex()">
+        <div class="add-btn__inner">
+          <i class="fas fa-plus"></i>
+        </div>
+      </div>
+    </div>
+  
+    <ng-template s-host></ng-template>
+    
+  </div>
+  
+  <app-data-editor [data]="item.data" [component]="editorsComponent.data" (dataChange)="onSaveData($event)" *ngIf="reader.data"></app-data-editor>
+  
+    <app-params-editor [data]="item.params" [component]="editorsComponent.params" (dataChange)="onSaveParams($event)" *ngIf="reader.params"></app-params-editor>
+    
+</div>

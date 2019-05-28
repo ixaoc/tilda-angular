@@ -1,0 +1,33 @@
+[
+  {
+    "component": "S2Component",
+    "params": {
+      "common": {
+        "color": "#000"
+        
+      },
+      "position": {
+        "paddingTop": "85px",
+        "paddingBottom": "85px"
+      },
+      
+      "title": {
+        "fontSize": "32px",
+        "color": "#000"
+      },
+      "subtitle": {
+        "fontSize": "14px",
+        "color": "#000"
+      },
+      "description": {
+        "fontSize": "14px",
+        "color": "#000"
+      }
+    },
+    "data": {
+      "subtitle": "Об инструменте",
+      "title": "Чем же хорош Angular?",
+      "description": "Краткое описание о не кратких возможностях фреймворка"
+    }
+  }
+]

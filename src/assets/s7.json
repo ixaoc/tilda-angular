@@ -1,0 +1,22 @@
+[
+  {
+    "component": "S7Component",
+    "params": {
+      
+      "position": {
+        "paddingTop": "40px",
+        "paddingBottom": "40px"
+      },
+      
+      "line": {
+        "width": "120px",
+        "height": "1px",
+        "backgroundColor": "#cecece"
+     }
+     
+    },
+    "data": {
+      
+    }
+  }
+]

@@ -1,0 +1,59 @@
+.data-editor
+  position fixed
+  top 0
+  bottom 0
+  left 0
+  right 0
+  
+  z-index 99
+  background rgba(0, 0, 0, 0.3)
+  
+  &__bg
+    position absolute
+    top 0
+    left 0
+    right 0
+    bottom 0
+    
+  &__inner
+    background rgba(255,255,255,0.92)
+    position fixed
+    bottom 0
+    top 0
+    left 0
+    width 450px
+    padding 20px 14px
+    padding-top 69px
+    box-sizing border-box
+    overflow auto
+    
+  &-btns
+    position fixed
+    top 0
+    left 0
+    width 450px
+    
+    button
+      border 0
+      width 50%
+      padding 18px
+      color #fff
+      
+      outline none
+      cursor pointer
+      
+    &__save
+      background #000
+      
+      &-close
+        background #ff855d
+        
+        
+  textarea  
+    width 100%
+    height 120px
+    box-sizing border-box
+    
+    padding 10px 0
+    
+    

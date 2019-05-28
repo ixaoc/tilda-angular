@@ -1,0 +1,31 @@
+[
+  {
+    "component": "S5Component",
+    "params": {
+    
+      "common": {
+        "color": "#000"
+        
+      },
+      "position": {
+        "paddingTop": "65px",
+        "paddingBottom": "65px"
+      },
+      
+      "lines": {
+        "height": "1px",
+        "backgroundColor": "#ccc"
+      },
+      
+      "title": {
+        "fontSize": "18px",
+        "color": "#000"
+      }
+      
+      
+    },
+    "data": {
+      "title": "Each type of visual aid has pros and cons that must be evaluated to ensure it will be beneficial to the overall presentation."
+    }
+  }
+]

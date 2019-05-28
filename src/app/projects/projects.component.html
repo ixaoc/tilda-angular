@@ -1,0 +1,79 @@
+<main>
+  <div class="container">
+    <div class="nav">
+      <span class="nav__title">Мои сайты</span>
+      
+      <div class="actions">
+      
+        <a class="actions__link" (click)="changePopup()">
+          <img class="actions__icon" src="/assets/images/startnew-plus.png">
+          <span>Создать новый сайт</span>
+        </a>
+        
+        <a class="actions__link is-disable">
+          <img class="actions__icon" src="/assets/images/startnew-plus.png">
+          <span>Создать рассылку</span>
+        </a>
+      </div>
+    </div>
+    
+    <ul class="list">
+      <li class="list__item" *ngFor="let key of siteService.data | objKeys">
+        <div class="project">
+          <a class="project__header" [routerLink]="['/projects', key]" routerLinkActive="active">
+            <span class="project__title">{{siteService.data[key].title}}</span>
+            <p class="project__desc">{{siteService.data[key].description}}</p>
+          </a>
+          
+          <div class="project__hr"></div>
+          
+          <div class="project-controls">
+            <div class="project-controls__inner">
+              <a class="project-controls__item project-controls__edit" [routerLink]="['/projects', key]" routerLinkActive="active">Редактировать</a>
+              <a class="project-controls__item project-controls__view is-disable">project{{key}}.tilda.ws</a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="list__item">
+        <div class="new-project" (click)="changePopup()">
+          <span>+</span>
+        </div>
+      </li>
+    </ul>
+    
+  </div>
+  
+  <div class="popup" [ngClass]="{'is-view': popup}">
+    
+      <div class="popup__content">
+        <span class="popup__close" (click)="changePopup()"></span>
+        
+        <div class="popup-header">
+          <span>Создать новый сайт</span>
+        </div>
+        
+        <div class="popup-content">
+          <div class="form-box">
+            <label>Название сайта</label>
+            <input class="default-input" type="text" placeholder="Укажите название сайта">
+          </div>
+          
+          <div class="form-box">
+            <label>Описание сайта</label>
+            <input class="default-input" type="text" placeholder="Укажите описание сайта">
+          </div>
+          
+          <div class="form-box form-box--table">
+            <div class="form-warning">Создание сайта временно недоступно</div>
+            
+            <div class="form-btns">
+              <a class="default-btn" (click)="changePopup()">Закрыть</a>
+              <a class="default-btn default-btn--orange is-disable">Создать сайт</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+  </div>
+</main>

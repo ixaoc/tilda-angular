@@ -1,0 +1,52 @@
+{
+    132: {
+      "params": {
+        "title": "Test website",
+      },
+      "content": {
+        "pages": {
+          1: {
+            "data": [
+              {
+                "component": "S2Component",
+                "params": {
+                  "common": {
+                    "color": "#ffffff"
+                    
+                  },
+                  "position": {
+                    "paddingTop": "35px",
+                    "paddingBottom": "35px"
+                  },
+                  
+                  "title": {
+                    "fontSize": "56px",
+                    "color": "#ffffff"
+                  },
+                  "subtitle": {
+                    "fontSize": "20px",
+                    "color": "#ffffff"
+                  },
+                  "description": {
+                    "fontSize": "20px",
+                    "color": "#ffffff"
+                  }
+                },
+                "data": {
+                  "subtitle": "Об инструменте",
+                  "title": "Чем же хорош Angular?",
+                  "description": "Краткое описание о не кратких возможностях фреймворка"
+                }
+              }
+            ],
+            "params": {
+              "title": "Empty title"
+            }
+          }
+        }
+          
+        
+      }
+    }
+
+}

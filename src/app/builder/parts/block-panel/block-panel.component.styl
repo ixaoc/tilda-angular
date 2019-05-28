@@ -1,0 +1,90 @@
+.component
+  position fixed
+  top 0
+  bottom 0
+  left 0
+  right 0
+  
+  padding 12px
+  
+  z-index 99
+  background rgba(0, 0, 0, 0.1)
+  
+  &__bg
+    position absolute
+    top 0
+    left 0
+    right 0
+    bottom 0
+ 
+  &__inner
+    background rgba(255,255,255,0.97)
+    position fixed
+    bottom 0
+    top 0
+    left 0
+    width 320px
+    padding 0px 14px
+    box-sizing border-box
+    overflow auto
+    
+    
+.list
+  padding 0
+  margin 0
+  list-style none
+  
+  &-item
+    border 1px solid rgba(0,0,0,0.07)
+    border-left 0
+    border-right 0
+    padding 20px 8px
+    
+    font-size 12px
+    line-height 20px
+    color #aaa
+    
+    cursor pointer
+    transition background-color 0.15s ease
+    
+    &:hover
+      background-color #f9f9f9
+    
+    &:first-child
+      border-top 0
+      
+    &:last-child
+      border-bottom 0
+    
+    &__image
+      max-width 100%
+      display block
+      margin 0 auto 18px
+      
+    &__code
+      background-color #bbb
+      display inline-block
+      padding-left 9px
+      padding-right 7px
+      padding-top 5px
+      padding-bottom 3px
+      font-size 12px
+      font-weight 600
+      line-height 14px
+      color #fff
+      text-align center
+      white-space nowrap
+      border-radius 10px
+      vertical-align baseline
+      letter-spacing 1px
+      
+      margin-right 9px
+      
+    &__title
+      color #000
+      font-weight 700
+      
+      margin-right 8px
+    
+    
+    

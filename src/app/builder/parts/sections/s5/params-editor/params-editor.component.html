@@ -1,0 +1,55 @@
+
+  <div class="editor">
+    <div class="editor-block">
+      <h5 class="editor-block__title">Общие настройки</h5>
+      
+      <div class="editor-field">
+        <label>Цвет текста</label>
+        <input type="text" [(ngModel)]="data.common.color">
+      </div>
+      
+    </div>
+    
+    <div class="editor-block">
+      <h5 class="editor-block__title">Отступы</h5>
+      
+      <div class="editor-field">
+        <label>Отступ сверху</label>
+        <input [(ngModel)]="data.position.paddingTop">
+      </div>
+      
+      <div class="editor-field">
+        <label>Отступ снизу</label>
+        <input type="text" [(ngModel)]="data.position.paddingBottom">
+      </div>
+    </div>
+    
+    <div class="editor-block">
+      <h5 class="editor-block__title">Текст</h5>
+      
+      <div class="editor-field">
+        <label>Размер шрифта</label>
+        <input [(ngModel)]="data.title.fontSize">
+      </div>
+      
+      <div class="editor-field">
+        <label>Цвет текста</label>
+        <input type="text" [(ngModel)]="data.title.color">
+      </div>
+    </div>
+    
+    <div class="editor-block">
+      <h5 class="editor-block__title">Линии</h5>
+      
+      <div class="editor-field">
+        <label>Толщина</label>
+        <input [(ngModel)]="data.lines.height">
+      </div>
+      
+      <div class="editor-field">
+        <label>Цвет</label>
+        <input type="text" [(ngModel)]="data.lines.backgroundColor">
+      </div>
+    </div>
+    
+  </div>

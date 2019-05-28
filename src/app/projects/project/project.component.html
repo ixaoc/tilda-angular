@@ -1,0 +1,41 @@
+<div>
+  <div class="header">
+    <div class="header__container">
+      <div class="header__title">
+        {{siteService.data[projectId].title}}
+      </div>
+      
+      <div class="header__btn">
+        <a class="header__settings-btn btn" [routerLink]="['/projects', projectId, 'settings']">
+          <img src="https://tilda.cc/tpl/img/td-site__settings.png">
+          <span>Настройки сайта</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="content">
+    <div class="container">
+      <span class="pages-title">Страницы сайта:</span>
+      
+      <ul class="pages">
+        <li class="pages__item" *ngFor="let key of pageService.data[projectId] | objKeys">
+          <div class="cell pages__ava">
+            <div class="ava" [routerLink]="['/builder', projectId, key]"></div>
+          </div>
+          <div class="cell"><span class="pages__title" [routerLink]="['/builder', projectId, key]">{{pageService.data[projectId][key].title}}</span></div>
+          <div class="cell pages__btns">
+            <img src="https://tilda.cc/tpl/img/td-icon-settings-black.png" (click)="open(projectId, key)">
+            
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <app-popup-main *ngIf="popup"
+    [data]="popupData"
+    [layout]="popupLayout"
+    [projectId]="projectId"
+    (statusChange)="close($event)"></app-popup-main>
+</div>

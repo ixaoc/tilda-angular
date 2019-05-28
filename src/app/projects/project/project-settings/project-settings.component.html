@@ -1,0 +1,35 @@
+      <div>
+        <div class="popup-header">
+          <span>Настройки страницы</span>
+        </div>
+
+        <ul class="popup-tabs">
+          <li class="is-active">Главное</li>
+          <li class="is-disabled">Бейджик</li>
+          <li class="is-disabled">Facebook and SEO</li>
+          <li class="is-disabled">Экспорт</li>
+          <li class="is-disabled">Действия</li>
+          <li class="is-disabled">Доп.</li>
+        </ul>
+        
+        <div class="popup-content">
+          <div class="form-box">
+            <label>Название страницы</label>
+            <input class="default-input" type="text" placeholder="Укажите название страницы" [(ngModel)]="data.title">
+          </div>
+          
+          <div class="form-box">
+            <label>Описание страницы</label>
+            <input class="default-input" type="text" placeholder="Укажите описание страницы" [(ngModel)]="data.description">
+          </div>
+          
+          <div class="form-box form-box--table">
+            <div class="form-warning" [routerLink]="['/projects', projectId, 'settings']">Перейти в настройки сайта</div>
+            
+            <div class="form-btns">
+              <a class="default-btn" (click)="close()">Закрыть</a>
+              <a class="default-btn default-btn--orange" (click)="save()">Сохранить</a>
+            </div>
+          </div>
+        </div>
+      </div>

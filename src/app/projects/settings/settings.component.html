@@ -1,0 +1,61 @@
+<div class="settings">
+  <div class="container">
+    <div class="settings-header">
+      <div class="settings-header__breadcrumbs">
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item is-link" [routerLink]="['/projects']">Мои сайты</li>
+          <li class="breadcrumbs__item breadcrumbs__arrow"><img src="https://tilda.cc/tpl/img/popups/arrow.svg"></li>
+          <li class="breadcrumbs__item is-link" [routerLink]="['/projects', projectId]"><span>{{siteService.data[projectId].title}}</span></li>
+          <li class="breadcrumbs__item breadcrumbs__arrow"><img src="https://tilda.cc/tpl/img/popups/arrow.svg"></li>
+          <li class="breadcrumbs__item">Настройки сайта</li>
+        </ul>
+      </div>
+      <div class="settings-header__btns">
+        <a class="btn" [routerLink]="['/projects', projectId]">Закрыть</a>
+        <a class="btn btn--orange" (click)="save()" [style.background-color]="saving ? 'green' : ''">{{saving ? 'Сохранено' : 'Сохранить изменения'}}</a>
+      </div>
+    </div>
+    
+    <div class="settings-content">
+      <div class="settings-content__sidebar">
+        <ul class="settings-menu">
+          <li class="settings-menu__item" [class.is-active]="currentTab == 'main'" (click)="clickMenu('main')">Основное</li>
+          <li class="settings-menu__item" [class.is-active]="currentTab == 'fonts'" (click)="clickMenu('fonts')">Шрифты и цвета</li>
+          <li class="settings-menu__item" [class.is-active]="currentTab == 'homepage'" (click)="clickMenu('homepage')">Главная страница</li>
+          <li class="settings-menu__item" [class.is-active]="currentTab == 'domain'" (click)="clickMenu('domain')">Домен</li>
+          <li class="settings-menu__item" [class.is-active]="currentTab == 'analytics'" (click)="clickMenu('analytics')">Аналитика</li>
+          <li class="settings-menu__item" [class.is-active]="currentTab == 'seo'" (click)="clickMenu('seo')">SEO</li>
+          <li class="settings-menu__item" [class.is-active]="currentTab == 'export'" (click)="clickMenu('export')">Экспорт</li>
+          <li class="settings-menu__item" [class.is-active]="currentTab == 'forms'" (click)="clickMenu('forms')">Формы</li>
+          <li class="settings-menu__item" [class.is-active]="currentTab == 'payments'" (click)="clickMenu('payments')">Платежные системы</li>
+          <li class="settings-menu__item" [class.is-active]="currentTab == 'layout'" (click)="clickMenu('layout')">Шапка и подвал</li>
+        </ul>
+      </div>
+      
+      <div class="settings-content__forms">
+        <div class="form-content">
+          <ul class="form-list">
+            <li class="form-list__item" [class.is-view]="currentTab == 'main'">
+              <div class="form-box">
+                <label>Название сайта</label>
+                <input class="default-input" type="text" placeholder="Укажите название сайта" [(ngModel)]="data.title">
+              </div>
+              
+              <div class="form-box">
+                <label>Описание сайта</label>
+                <input class="default-input" type="text" placeholder="Укажите описание сайта" [(ngModel)]="data.description">
+              </div>
+            </li>
+            
+            <li class="form-list__item" [class.is-view]="currentTab != 'main'">
+              <div class="flush-box">
+                <span>Здесь должны быть настройки</span>
+                <span>Различные настройки сайта</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

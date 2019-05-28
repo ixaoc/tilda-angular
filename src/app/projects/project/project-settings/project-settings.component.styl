@@ -1,0 +1,102 @@
+.form-box
+  margin-top 48px
+  
+.popup
+  &__content
+    background #fff
+    width 100%
+    max-width 620px
+    margin auto
+    
+    box-sizing border-box
+    position relative
+    
+  
+  &-header
+    background #f7f7f7
+    padding 24px 36px
+        
+    span
+      font-size 18px
+      color #000
+  
+      padding-right 25px
+    
+  &-content
+    padding 0 36px 36px
+   
+  &-tabs
+    padding 23px 32px 0 32px
+    list-style none
+    display flex
+    justify-content space-between
+    background #f7f7f7
+    margin 0
+    border-bottom 1px solid #e5e5e5
+    margin-bottom -1px
+    
+    li
+      cursor pointer
+      padding-bottom 13px
+      border-bottom 1px solid transparent
+      
+      &.is-active
+        border-color #333
+        
+      &.is-disabled
+        opacity 0.4
+        cursor inherit
+
+    
+.default-btn
+  display inline-block
+  position relative
+  padding 10px 29px 11px
+  margin 0
+  border 1px solid #b7b7b7
+  background #fff
+  border-radius 100px
+  font-size 15px
+  color #000
+  cursor pointer
+  
+  transition border 0.15s ease
+    
+  &--orange
+    position relative
+    display inline-block
+    vertical-align top
+    padding 9px 29px 11px
+    border 1px solid #fa8669
+    background #fa8669
+
+    color #fff
+    
+  &:hover
+    border-color #fa8669
+    
+  &.is-disable
+    opacity 0.4
+    cursor inherit
+  
+.form-box--table
+  display table
+  width 100%
+  
+.form-warning
+  display table-cell
+  vertical-align middle
+  font-size 13px
+  color #777
+  outline none
+  cursor pointer
+  
+.form-btns
+  display table-cell
+  width 310px
+  text-align right
+  margin-top 24px  
+   
+.default-btn--orange
+  margin-left 6px 
+    

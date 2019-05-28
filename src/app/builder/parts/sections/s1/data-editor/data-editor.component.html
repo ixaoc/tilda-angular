@@ -1,0 +1,41 @@
+
+  <div class="editor">
+    <div class="editor-block">
+      
+      <div class="editor-field">
+        <label>О компании</label>
+        <input [(ngModel)]="data.company">
+      </div>
+      
+      <div class="editor-field">
+        <label>Заголовок</label>
+        <input type="text" [(ngModel)]="data.title">
+      </div>
+      
+      <div class="editor-field">
+        <label>Подзаголовок</label>
+        <textarea [(ngModel)]="data.subtitle"></textarea>
+      </div>
+      
+      <div class="editor-field">
+        <label>Изображение</label>
+        
+        <div class="image-field image-field--uploaded">
+          <input type="file" id="s1-file" (change)="fileChanged($event)">
+          <label for="s1-file">Загрузить изображение</label>
+        </div>
+        
+        <div class="image-field image-field--preview" *ngIf="data.background!=''">
+          <img class="image-preview" src="{{data.background}}">
+          <span class="image-field__delete-btn" (click)="deleteImage()">
+            <img class="delete-icon" src="https://tilda.cc/tpl/img/td-icon-del-black.png">
+          </span>
+          
+        </div>
+        
+        
+      </div>
+    </div>
+    
+    
+  </div>

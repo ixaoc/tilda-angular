@@ -1,0 +1,19 @@
+<div class="default-panel">
+  <div class="default-panel__hr"></div>
+
+  <div class="tools">
+    <div class="tools__link all-blocks block-border" (click)="openBlocksPanel()">Все блоки</div>
+    
+    <ul class="btn-list block-list block-border">
+      <li class="btn-list__item tools__link" (click)="addNewItem('s1')">Обложка</li>
+      <li class="btn-list__item tools__link" (click)="addNewItem('s2')">Заголовок: средний</li>
+      <li class="btn-list__item tools__link" (click)="addNewItem('s3')">Лид</li>
+      <li class="btn-list__item tools__link" (click)="addNewItem('s4')">Текст</li>
+      <li class="btn-list__item tools__link" (click)="addNewItem('s5')">Фраза</li>
+      <li class="btn-list__item tools__link" (click)="addNewItem('s6')">Изображение</li>
+      <li class="btn-list__item tools__link" (click)="addNewItem('s7')">Линия</li>
+    </ul>
+    
+    <div class="tools__link zero-block block-border is-disable">Zero</div>
+  </div>
+</div>

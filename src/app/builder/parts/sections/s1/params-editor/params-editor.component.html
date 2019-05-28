@@ -1,0 +1,71 @@
+
+  <div class="editor">
+    <div class="editor-block">
+      <h5 class="editor-block__title">Общие настройки</h5>
+      
+      <div class="editor-field">
+        <label>Высота контейнера</label>
+        <input [(ngModel)]="data.common.height">
+      </div>
+      
+      <div class="editor-field">
+        <label>Цвет текста</label>
+        <input type="text" [(ngModel)]="data.common.color">
+      </div>
+      
+      <div class="editor-field">
+        <label>Расположение контента</label>
+        
+        <div class="select-wrapper">
+          <select [(ngModel)]="data.position.verticalAlign">
+            <option value="top">Сверху</option>
+            <option value="middle">По центру</option>
+            <option value="bottom">Снизу</option>
+          </select>
+        </div>
+      </div>
+      
+    </div>
+    
+    <div class="editor-block">
+      <h5 class="editor-block__title">О компании</h5>
+      
+      <div class="editor-field">
+        <label>Размер шрифта</label>
+        <input [(ngModel)]="data.company.fontSize">
+      </div>
+      
+      <div class="editor-field">
+        <label>Цвет текста</label>
+        <input type="text" [(ngModel)]="data.company.color">
+      </div>
+    </div>
+    
+    <div class="editor-block">
+      <h5 class="editor-block__title">Заголовок</h5>
+      
+      <div class="editor-field">
+        <label>Размер шрифта</label>
+        <input [(ngModel)]="data.title.fontSize">
+      </div>
+      
+      <div class="editor-field">
+        <label>Цвет текста</label>
+        <input type="text" [(ngModel)]="data.title.color">
+      </div>
+    </div>
+    
+    <div class="editor-block">
+      <h5 class="editor-block__title">Подзаголовок</h5>
+      
+      <div class="editor-field">
+        <label>Размер шрифта</label>
+        <input [(ngModel)]="data.subtitle.fontSize">
+      </div>
+      
+      <div class="editor-field">
+        <label>Цвет текста</label>
+        <input type="text" [(ngModel)]="data.subtitle.color">
+      </div>
+    </div>
+  </div>

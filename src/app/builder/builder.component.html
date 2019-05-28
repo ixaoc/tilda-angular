@@ -1,0 +1,46 @@
+<main class="builder">
+  <header class="header">
+    <div class="waves">
+      <img src="https://tilda.cc/tpl/img/tp-menu__waves-black.png">
+    </div>
+    <div class="menu">
+      <a class="projects" [routerLink]="['/projects']">Мои сайты</a>
+      <span class="arrow">&nbsp;&nbsp;⟶</span>
+      <a class="current-project" [routerLink]="['/projects', project]">{{siteService.data[project].title}}</a>
+    </div>
+    
+    <div class="empty-box"></div>
+    
+    <div class="menu menu--right">
+      <nav class="menu-list">
+        <a class="menu-list__item is-disable">Предпросмотр</a>
+        <a class="menu-list__item menu-list__item--bold is-disable">Опубликовать</a>
+        <a class="menu-list__item" (click)="openSettings(project, page)">Настройки</a>
+        <a class="menu-list__item" href="http://help-ru.tilda.ws/" target="_blank">Помощь</a>
+      </nav>
+    </div>
+  </header>
+  
+  <div class="content" *ngIf="dataService.initState">
+    
+    
+    <ng-container *ngIf="sections.length > 0">
+      <ng-container *ngFor="let section of sections; index as i; trackBy: trackBySections">
+        <app-section [index]="i" [data]="section" (request)="onState($event)" (allBlocksRequest)="openBlocksPanel($event)"></app-section>
+      </ng-container>
+     
+    </ng-container>
+    
+    <app-default-panel (addRequest)="addBlock($event)" (allBlocksRequest)="openBlocksPanel($event)"></app-default-panel>
+  </div>
+  
+  <div *ngIf="!dataService.initState" class="loader">Инициализация данных ...</div>
+  
+  <app-popup-main *ngIf="popup"
+    [data]="popupData"
+    [layout]="popupLayout"
+    [projectId]="project"
+    (statusChange)="closeSettings($event)"></app-popup-main>
+  
+  <app-block-panel (addRequest)="addBlock($event)" (allBlocksRequest)="openBlocksPanel($event)" *ngIf="blocksShow"></app-block-panel>
+</main>

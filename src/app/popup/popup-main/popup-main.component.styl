@@ -1,0 +1,51 @@
+.popup
+  position fixed
+  top 0
+  left 0
+  right 0
+  bottom 0
+  
+  padding 48px 24px
+  
+  overflow auto
+  z-index 999999999
+  
+  &.is-view
+    display block
+  
+  &__bg
+    position fixed
+    top 0
+    left 0
+    right 0
+    bottom 0
+  
+    background linear-gradient(to top right, rgba(227,101,87,0.8), rgba(238,174,117,0.9))
+
+
+  &__content
+    background #fff
+    width 100%
+    max-width 620px
+    margin auto
+    
+    box-sizing border-box
+    position relative
+    
+  &__close
+    position absolute
+    top 25px
+    right 25px
+    
+    width 19px
+    height 19px
+    
+    background url('https://tilda.cc/tpl/img/popups/all-icons.svg') no-repeat -58px -54px;
+    cursor pointer
+  
+    &:hover
+      background: url('https://tilda.cc/tpl/img/popups/all-icons-orange.svg') no-repeat -57px -50px;
+      
+    
+
+ 
